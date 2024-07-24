@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					fontSans.variable,
 				)}
 			>
-				{children}
+				<TooltipProvider>{children}</TooltipProvider>
 			</body>
 		</html>
 	);
